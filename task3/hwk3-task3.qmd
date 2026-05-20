@@ -1,0 +1,21 @@
+---
+title: "Task 3: Considerations in High Dimensions"
+author: "Richard Montes Lemus"
+format: html
+editor: source
+---
+
+## Title + intro
+
+The following document is a component of EDS 232 assignment 3, which explores common problems that may arise with high-dimensional datasets and uses generative AI to aid understanding.
+
+## Concept to clarify
+I was confused by this claim from 6.4.2 What Goes Wrong in High Dimensions?: 
+"Unfortunately, the Cp, AIC, and BIC approaches are not appropriate in the high-dimensional setting, because estimatingˆ σ2 is problematic. (For instance, the formula forˆ σ2 from Chapter 3 yields an estimateˆ σ2 = 0 in this setting.)"
+
+## Prompt
+I am a student in a machine learning class who has experience using Lasso and Ridge regression models to penalize unimportant features. I am confused by a claim I came across in a book that explains the common problems that may arise with high-dimensional datasets. This claim explains that approaches for adjusting the training set RSS or R^2 in order to account for the number of variables used to fit a least square model like the Cp, AIC, and BIC are not appropriate in high dimensional settings because estimating o^2 is problematic. Can you explain what this means and how it differs from methods like Lasso and Ridge regression which are also supposed to adjust RSS to account for variables presence or strength used in the model. 
+
+## Generative AI reflection
+I used Claude as a generative AI tool for this task. I gave it a prompt where I asked it to explain why Cp, AIC, and BIC are not appropriate in high dimensional settings and compare them to Lasso and Ridge (models I am familiar with). Having it compare these novel approaches for adjusting RSS to approaches I'm familiar with helped me put these new topics into context. I took me about 4 iterations to clarify the concept, it explained it very broadly at first and I had to ask more specific questions about its answer such as what o^2 represented. The response did match the information given in the textbook. Both explained that Cp, AIC, BIC use RSS adjustment to select between models after fitting, while Ridge/Lasso use RSS adjustments to change the model itself during fitting and use cross validation as opposed to o^2. They both also claimed Cp/AIC/BIC broke down when p is close or larger than n (a high dimensional model). 
+
